@@ -113,12 +113,11 @@ const CHARS: &[char] = &[
     'm', 'n', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
 ];
 
-// TODO ConnectDesk server: set the ConnectDesk rendezvous (hbbs) host here, e.g. &["id.example.com"].
-// Kept as one empty entry, not an empty list, because the client indexes RENDEZVOUS_SERVERS[0].
+// ConnectDesk server: Google Cloud e2-micro "connectdesk-server" (project connectdesk-515701), static IP.
 // Never point this at rustdesk.com: a rebranded app must not use RustDesk's public servers.
-pub const RENDEZVOUS_SERVERS: &[&str] = &[""];
-// TODO ConnectDesk server: set the ConnectDesk server public key (hbbs id_ed25519.pub) here.
-pub const RS_PUB_KEY: &str = "";
+pub const RENDEZVOUS_SERVERS: &[&str] = &["35.209.36.91"];
+// Public key of the ConnectDesk hbbs (id_ed25519.pub). Public by design; safe to commit.
+pub const RS_PUB_KEY: &str = "V8gVFRcCpWTzgb5VSyXJVBP7GNnqxByevAeJCRTFg5Y=";
 
 pub const RENDEZVOUS_PORT: i32 = 21116;
 pub const RELAY_PORT: i32 = 21117;
